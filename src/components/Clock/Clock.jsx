@@ -10,7 +10,7 @@ export default function Clock() {
   }, []);
 
   return (
-    <div className='border-4 border-[#7f5af0] p-1 my-auto w-1/4 rounded-md'>
+    <div className='transition ease-in-out hover:scale-110 border-4 border-[#7f5af0] p-1 my-auto w-1/4 rounded-md'>
       {time}
     </div>
   );

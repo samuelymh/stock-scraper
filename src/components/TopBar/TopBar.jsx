@@ -12,7 +12,7 @@ export default function TopBar() {
       id='topbar' 
       className='flex justify-between p-4 text-3xl shadow-lg'>
       <div 
-        className='border-4 p-1 w-1/4 border-[#7f5af0] border-opacity-75 rounded-md'>
+        className='transition ease-in-out hover:scale-110 border-4 p-1 w-1/4 border-[#7f5af0] border-opacity-75 rounded-md'>
         Scrapy
       </div>
       <Clock />
