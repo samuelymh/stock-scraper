@@ -1,0 +1,8 @@
+#topbar {
+  background-color: #16161a;
+  color: #fffffe;
+}
+
+#topbar * {
+  background-color: #7f5af0;
+}
