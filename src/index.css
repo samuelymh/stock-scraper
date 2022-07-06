@@ -7,7 +7,8 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, 'Poppins', 'sans-serif';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #72757e;
+  background-color: #16161a;
+  color: #fffffe;
 }
 
 code {
