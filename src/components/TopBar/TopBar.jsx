@@ -10,7 +10,7 @@ export default function TopBar() {
   return (
     <div 
       id='topbar' 
-      className='flex justify-between p-4 text-3xl'>
+      className='flex justify-around py-4  text-3xl'>
       <div 
         className='transition ease-in-out hover:scale-110 p-1 my-auto w-1/4 rounded-md'>
         Scrapy

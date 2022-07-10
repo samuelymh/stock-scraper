@@ -1,11 +1,8 @@
 import React from 'react';
-import { useState, useEffect } from 'react';
 
 // Components
-import SearchBox from '../SearchBox/SearchBox';
 
 export default function Calculator() {
-  const [stockTicker, setStockTicker] = useState('');
 
   const fetchFinvizData = () => {
     return 0;
@@ -21,9 +18,8 @@ export default function Calculator() {
 
 
   return (
-    <div>
-      <SearchBox setStockTicker={setStockTicker}/>
-      This is calculator and searchbox
+    <div className='border-4 lg:w-3/5 w-full grow my-10 mx-5 rounded-md'>
+      <p>Calculator</p>
     </div>
   );
 }
