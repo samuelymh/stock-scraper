@@ -2,14 +2,14 @@ import './App.css';
 
 // Components
 import TopBar from './components/TopBar/TopBar';
-import Calculator from './components/Calculator/Calculator';
+import MainContent from './components/MainContent/MainContent';
 
 function App() {
 
   return (
     <div className="App">
       <TopBar />
-      <Calculator />
+      <MainContent />
     </div>
   );
 }
