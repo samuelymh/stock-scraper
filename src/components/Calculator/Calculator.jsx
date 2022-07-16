@@ -1,25 +1,32 @@
-import React from 'react';
+import React, { Component } from 'react';
+// import puppeteer from 'puppeteer';
+// const puppeteer = require('puppeteer');
 
 // Components
 
-export default function Calculator() {
+class Calculator extends Component {
+  FINVIZ_PAGE = "https://finviz.com/quote.ashx?t=MSFT";
 
-  const fetchFinvizData = () => {
+  fetchFinvizData = () => {
+    // async
     return 0;
   }
 
-  const cleanFinvizData = () => {
+  cleanFinvizData = () => {
     return 0;
   }
 
-  const setFinvizData = () => {
+  setFinvizData = () => {
     return 0;
   }
 
-
-  return (
-    <div className='border-4 lg:w-3/5 w-full grow my-10 mx-5 rounded-md'>
-      <p>Calculator</p>
-    </div>
-  );
+  render(){
+    return (
+      <div className='border-4 lg:w-3/5 w-full grow my-10 mx-5 rounded-md'>
+        <p>Calculator</p>
+      </div>
+    );
+  }
 }
+
+export default Calculator;

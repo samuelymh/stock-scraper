@@ -40,12 +40,12 @@ class MainContent extends Component {
     const { history } = this.state;
 
     return (
-      <div className='flex flex-wrap border-4 mx-10 rounded-md'>
+      <div className='flex flex-wrap border-4 sm:mx-10 md:w-auto rounded-md'>
         <SearchSection 
           onSearchChange={this.onSearchChange} 
           onButtonSubmit={this.onButtonSubmit}
-          onEnterKeypress={this.onEnterKeypress} 
-          history={history} 
+          onEnterKeypress={this.onEnterKeypress}
+          history={history}
         />
         <Calculator />
       </div>
