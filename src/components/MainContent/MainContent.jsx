@@ -9,25 +9,28 @@ class MainContent extends Component {
     super();
     this.state = {
       searchField: '',
+      currentTicker: '',
       history: []
     }
   }
 
   onSearchChange = event => {
-    this.setState({ searchField: event.target.value.trimLeft().trimRight() });
+    event.target.value = event.target.value.toLocaleUpperCase();
+    this.setState({ searchField: event.target.value.trim() });
   }
 
   onButtonSubmit = () => {
     // Append searched ticker into history if field is non-empty
     const { history, searchField } = this.state;
-      if(searchField){
-      this.setState({ history: [...history, searchField]});
-    }
+    if(searchField){
+      this.setState({ history: [...history, searchField] });
+      this.setState({ currentTicker: searchField });
 
-    // To reset input field and its state
-    this.setState({ searchField: '' })
-    const inputField = document.getElementById('inputField');
-    inputField.value = '';
+      // To reset input field and its state
+      this.setState({ searchField: '' })
+      const inputField = document.getElementById('inputField');
+      inputField.value = '';
+    }
   }
   
   onEnterKeypress = event => {
@@ -37,7 +40,7 @@ class MainContent extends Component {
   }
 
   render() {
-    const { history } = this.state;
+    const { history, currentTicker } = this.state;
 
     return (
       <div className='flex flex-wrap border-4 sm:mx-10 md:w-auto rounded-md'>
@@ -47,7 +50,7 @@ class MainContent extends Component {
           onEnterKeypress={this.onEnterKeypress}
           history={history}
         />
-        <Calculator />
+        <Calculator currentTicker={currentTicker}/>
       </div>
     );
   }
